@@ -7,13 +7,15 @@ class Rps
 
   def check 
       if @player1 == @player2
-        return "draw"
+       "draw"
       elsif (@player1 == "rock") && (@player2 == "scissors") 
         return "player1 win"
       elsif (@player1 == 'paper') && (@player2 == "rock")
-        return "player1 wins"
+       "player1 win"
+     elsif (@player1 == "scissors") && (@player2 == "paper")
+      "player1 win"
       else 
-        return "player2 wins"
+       "player2 win"
       end
     end
   end
@@ -21,5 +23,5 @@ class Rps
 
 
 
-  
+
   

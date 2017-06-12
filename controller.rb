@@ -5,8 +5,7 @@ require('json')
 require_relative( './models/rps' )
 
 
-get '/check/:player1/:player2' do
-  match = Rps.new(params["player1"], params["player2"])
-  @result = match
-  erb(:check )
+get '/answer/:player1/:player2' do
+ @game9 = Rps.new( params[:player1] , params[:player2] )
+ return "#{@game9.check()}"
 end
